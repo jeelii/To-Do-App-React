@@ -1,38 +1,205 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #8F9E8B;
+  color: #292929;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: #F2E6B6;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: .5rem;
+}
+
+button {
+  display: inline-block;
+  overflow: visible;
+  border: none;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+header {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #292929;
+  box-shadow: 2px 2px 12px #5B7876;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  max-width: 480px;
+  margin: auto auto 1rem;
+  padding: 1rem;
+  border-radius: .75rem;
+  background: #F2E6B6;
+  box-shadow: 2px 2px 12px #5B7876;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-item-section {
+  padding-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-item-form__label {
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .07rem;
+  text-transform: uppercase;
+}
+
+.add-item-form__input {
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  border: #8F9E8B solid 1px;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.add-item-form__input:focus {
+  border: #5B7876 solid 2px;
+  outline: none;
+}
+
+::placeholder {
+  color: #F2E6B6;
+}
+
+.button {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 0.25rem;
+  background: #8F9E8B;
+  color: white;
+  font-size: .75rem;
+  letter-spacing: .07rem;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #5B7876;
+}
+
+.button:focus {
+  border: #5B7876 solid 2px;
+  outline: none;
+  background: #5B7876;
+}
+
+.todo-list {
   display: flex;
   flex-direction: column;
+}
+
+.todo-item {
+  display: flex;
+  align-content: stretch;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  order: 2;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  border-radius: .25rem;
+  background: #5B7876;
   color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item>* {
+  padding: .4rem .55rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list__h-done {
+  order: 3;
+  margin-top: 1rem;
+}
+
+.todo-list__h-done svg {
+  color: #8F9E8B;
+  vertical-align: text-top;
+}
+
+.todo-item--done {
+  order: 4;
+}
+
+.todo-item:hover,
+.todo-item--done {
+  background: #8F9E8B;
+  text-decoration: white line-through wavy;
+}
+
+.todo-item--done:hover {
+  background: #5B7876;
+  color: white;
+  text-decoration: none;
+}
+
+.todo-item__content {
+  flex-grow: 10;
+}
+
+.todo-item__content h3 {
+  margin-bottom: 0;
+}
+
+.todo-item__content p {
+  margin-top: .3rem;
+  margin-bottom: 0;
+  font-size: .75rem;
+  letter-spacing: .07rem;
+  text-transform: uppercase;
+}
+
+.todo-item__icon--delete:hover {
+  border-radius: 50%;
+  background: #8F9E8B;
+}
+
+.todo-item .todo-item__icon--done,
+.todo-item:hover .todo-item__icon,
+.todo-item--done .todo-item__icon {
+  display: none;
+}
+
+.todo-item:hover .todo-item__icon--done,
+.todo-item--done .todo-item__icon--done,
+.todo-item--done:hover .todo-item__icon {
+  display: inline;
+}
+
+.todo-item--done:hover .todo-item__icon--done {
+  display: none;
 }
