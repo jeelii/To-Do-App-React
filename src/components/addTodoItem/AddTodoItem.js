@@ -6,17 +6,17 @@ const AddTodoItem = ({ addToList }) => {
   const [newItem, setNewItem] = useState({ title: '', details: '' });
   const [placeholderTitle, setPlaceholderTitle] = useState('To do');
 
-  const validateInput = (item) => {
+  const validateInput = item => {
     if (!item.title || item.title.trim() === '') {
       setPlaceholderTitle('Please add task title');
       setNewItem({
         ...newItem,
-        title: ''
+        title: '',
       });
       return false;
     }
     return true;
-  }
+  };
 
   const onSubmit = e => {
     e.preventDefault();

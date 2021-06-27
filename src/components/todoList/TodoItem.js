@@ -3,15 +3,14 @@ import React from 'react';
 import { FaCircle, FaCheckCircle, FaTrashAlt } from 'react-icons/fa';
 
 const TodoItem = ({ item, doneItem, deleteItem }) => {
-
   const toggleDone = () => {
     doneItem(item);
-  }
+  };
 
   const triggerDelete = e => {
     e.stopPropagation();
     deleteItem(item);
-  }
+  };
 
   return (
     <div className={`todo-item ${item.done ? 'todo-item--done' : ''}`}
@@ -33,7 +32,7 @@ const TodoItem = ({ item, doneItem, deleteItem }) => {
         </span>
       }
     </div >
-  )
+  );
 };
 
 export default TodoItem;

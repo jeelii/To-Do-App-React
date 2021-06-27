@@ -5,30 +5,29 @@ import AddTodoItem from './components/addTodoItem/AddTodoItem';
 import TodoList from './components/todoList/TodoList';
 
 const App = () => {
-
   const [todoList, setTodoList] = useState((localStorage.todos)
     ? JSON.parse(localStorage.todos)
     : []);
 
   useEffect(() => {
-    localStorage.todos = JSON.stringify(todoList)
-  }, [todoList])
+    localStorage.todos = JSON.stringify(todoList);
+  }, [todoList]);
 
-  const nextId = (arr) => { return arr.length !== 0 ? arr[arr.length - 1].id + 1 : 1; }
+  const nextId = arr => (arr.length !== 0 ? arr[arr.length - 1].id + 1 : 1);
 
   const addToList = item => {
     setTodoList([...todoList, {
       id: nextId(todoList),
       done: false,
       title: item.title.trim(),
-      details: item.details.trim()
+      details: item.details.trim(),
     }]);
   };
 
   const doneItem = item => {
-    setTodoList(todoList.map(task => task.id === item.id
+    setTodoList(todoList.map(task => (task.id === item.id
       ? { ...item, done: !task.done }
-      : task));
+      : task)));
   };
 
   const deleteItem = item => {
@@ -42,6 +41,6 @@ const App = () => {
       <TodoList todoList={todoList} doneItem={doneItem} deleteItem={deleteItem} />
     </div>
   );
-}
+};
 
 export default App;
