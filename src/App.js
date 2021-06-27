@@ -1,4 +1,4 @@
-import './appStyles';
+import './style';
 import { useState, useEffect } from 'react';
 import Header from './components/header/Header';
 import AddTodoItem from './components/addTodoItem/AddTodoItem';
@@ -13,7 +13,9 @@ const App = () => {
     localStorage.todos = JSON.stringify(todoList);
   }, [todoList]);
 
-  const nextId = arr => (arr.length !== 0 ? arr[arr.length - 1].id + 1 : 1);
+  const nextId = arr => (arr.length !== 0
+    ? arr[arr.length - 1].id + 1
+    : 1);
 
   const addToList = item => {
     setTodoList([...todoList, {

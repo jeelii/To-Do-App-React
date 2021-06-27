@@ -4,9 +4,9 @@ import { FaCheckCircle } from 'react-icons/fa';
 import TodoItem from './TodoItem';
 
 const TodoList = ({ todoList, doneItem, deleteItem }) => (
-  <section className="app__section todo-list">
-    <h2 className="todo-list__heading">To Do</h2>
-    <h2 className="todo-list__heading todo-list__heading-done">Done <span className="todo-list__heading-icon">
+  <section className='app__section todo-list'>
+    <h2 className='todo-list__heading'>To Do</h2>
+    <h2 className='todo-list__heading todo-list__heading-done'>Done <span className='todo-list__heading-icon'>
       <FaCheckCircle />
     </span></h2>
     {todoList.map(item => (

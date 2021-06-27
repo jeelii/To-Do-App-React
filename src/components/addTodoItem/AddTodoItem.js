@@ -35,29 +35,29 @@ const AddTodoItem = ({ addToList }) => {
   };
 
   return (
-    <section className="app__section add-item-section">
-      <form id="add-item-form" onSubmit={onSubmit} noValidate>
-        <label htmlFor="title" className="add-item-form__label">New task</label>
+    <section className='app__section add-item-section'>
+      <form id='add-item-form' onSubmit={onSubmit} noValidate>
+        <label htmlFor='title' className='add-item-form__label'>New task</label>
         <input
-          type="text"
-          name="title"
+          type='text'
+          name='title'
           value={newItem.title}
           onChange={newItemInput}
-          className="add-item-form__input"
+          className='add-item-form__input'
           placeholder={placeholderTitle}
-          autoComplete="off"
+          autoComplete='off'
           required
         />
-        <label htmlFor="new-task" className="add-item-form__label">Notes</label>
+        <label htmlFor='new-task' className='add-item-form__label'>Notes</label>
         <input
-          type="text"
-          name="details"
+          type='text'
+          name='details'
           value={newItem.details}
           onChange={newItemInput}
-          className="add-item-form__input"
-          autoComplete="off"
+          className='add-item-form__input'
+          autoComplete='off'
         />
-        <button type="submit" className="button">
+        <button type='submit' className='button'>
           <FaPlusCircle /> Add item</button>
       </form>
     </section>
