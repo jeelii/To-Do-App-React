@@ -10,7 +10,8 @@ const TodoList = ({ todoList, doneItem, deleteItem }) => (
       ? <h2 className='todo-list__heading todo-list__heading-done'>Done <span className='todo-list__heading-icon'>
         <FaCheckCircle />
       </span></h2>
-      : <p>Your todo-list is empty. Please add new tasks above.</p>}
+      : <p>Your todo-list is empty. Please add new tasks above.</p>
+    }
     {todoList.map(item => (
       <TodoItem key={item.id} item={item} doneItem={doneItem} deleteItem={deleteItem} />
     ))}
