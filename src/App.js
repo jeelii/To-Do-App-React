@@ -37,10 +37,12 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div className='app'>
       <Header />
-      <AddTodoItem addToList={addToList} />
-      <TodoList todoList={todoList} doneItem={doneItem} deleteItem={deleteItem} />
+      <main className='app__main'>
+        <AddTodoItem addToList={addToList} />
+        <TodoList todoList={todoList} doneItem={doneItem} deleteItem={deleteItem} />
+      </main>
     </div>
   );
 };

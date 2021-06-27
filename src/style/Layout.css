@@ -1,3 +1,7 @@
+.app__main {
+  padding: .5rem;
+}
+
 .app__section {
   max-width: 480px;
   margin: auto auto 1rem;
