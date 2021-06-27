@@ -1,3 +1,4 @@
+import './AddTodoItem.css';
 import React, { useState } from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
 
@@ -34,7 +35,7 @@ const AddTodoItem = ({ addToList }) => {
   };
 
   return (
-    <section className="add-item-section">
+    <section className="app__section add-item-section">
       <form id="add-item-form" onSubmit={onSubmit} noValidate>
         <label htmlFor="title" className="add-item-form__label">New task</label>
         <input

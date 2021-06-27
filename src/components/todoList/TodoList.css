@@ -1,0 +1,18 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list__heading {
+  margin-bottom: .5rem;
+}
+
+.todo-list__heading-done {
+  order: 3;
+  margin-top: 1rem;
+}
+
+.todo-list__heading-icon {
+  color: #8F9E8B;
+  vertical-align: text-top;
+}

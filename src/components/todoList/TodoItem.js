@@ -1,3 +1,4 @@
+import './TodoItem.css';
 import React from 'react';
 import { FaCircle, FaCheckCircle, FaTrashAlt } from 'react-icons/fa';
 
@@ -13,7 +14,8 @@ const TodoItem = ({ item, doneItem, deleteItem }) => {
   }
 
   return (
-    <div className={`todo-item ${item.done && 'todo-item--done'}`} onClick={toggleDone}>
+    <div className={`todo-item ${item.done ? 'todo-item--done' : ''}`}
+      onClick={toggleDone}>
       <span className='todo-item__icon'>
         <FaCircle />
       </span>
@@ -21,11 +23,12 @@ const TodoItem = ({ item, doneItem, deleteItem }) => {
         <FaCheckCircle />
       </span>
       <div className={'todo-item__content'}>
-        <h3>{item.title}</h3>
-        <p>{item.details}</p>
+        <h3 className={'todo-item__title'}>{item.title}</h3>
+        <p className={'todo-item__details'}>{item.details}</p>
       </div>
-      {item.done &&
-        <span className='todo-item__icon--delete' onClick={triggerDelete}>
+      {item.done
+        && <span className='todo-item__icon--delete'
+          onClick={triggerDelete}>
           <FaTrashAlt />
         </span>
       }

@@ -1,8 +1,8 @@
-import './App.css';
+import './appStyles';
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import TodoList from './components/TodoList';
-import AddTodoItem from './components/AddTodoItem';
+import Header from './components/header/Header';
+import AddTodoItem from './components/addTodoItem/AddTodoItem';
+import TodoList from './components/todoList/TodoList';
 
 const App = () => {
 
@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <AddTodoItem addToList={addToList} />
       <TodoList todoList={todoList} doneItem={doneItem} deleteItem={deleteItem} />

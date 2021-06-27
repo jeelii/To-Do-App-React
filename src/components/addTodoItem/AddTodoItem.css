@@ -1,0 +1,29 @@
+.add-item-section {
+  padding-bottom: 1rem;
+}
+
+.add-item-form__label {
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .07rem;
+  text-transform: uppercase;
+}
+
+.add-item-form__input {
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  border: #8F9E8B solid 1px;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.add-item-form__input:focus {
+  border: #5B7876 solid 2px;
+  outline: none;
+}
+
+.add-item-form__input::placeholder {
+  color: #F2E6B6;
+}
