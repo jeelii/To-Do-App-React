@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# App is live
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check out the app live here https://jennysvensson.github.io/To-Do-App-React/
 
 ## Available Scripts
 
