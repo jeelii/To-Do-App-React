@@ -1,6 +1,6 @@
 # App is live
 
-Check out the app live here https://jennysvensson.github.io/To-Do-App-React/
+Check out the app live here https://jeelii.github.io/To-Do-App-React/
 
 ## Available Scripts
 
